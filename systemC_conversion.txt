@@ -1,0 +1,13 @@
+본 작업의 목표는 다음과 같다
+    - src directory에 있는 파일들을 systemC로 변환한다.
+    - 변환된 파일들을 src_sc directory에 저장한다.
+    - 이러한 변환을 위해 필요한 형식은 simple_p2p directory에 있는 파일(dut.cc, dut.h)들을 참고한다.
+    - struct 변환은 md directory에 있는 파일(cynw_p2p_struct_transmission.md)을 참고하며, 
+      또한 store에 upload한 pdf file의 내용을 참고하여 업무를 진행할 예정이다.
+        필요한 내용의 참고하는 작업은 @~/tmp/Stratus_UG/examples.js file을 수정하고 실행하는 방법으로 진행할 예정이다.
+    - int 는 sc_int < 16 > 으로 변환한다
+    - dut.cc에 있는 f 함수가 rgb2ycocg_pixel 함수에 대응되게 변환한다.
+    - thread_function은 가능한한 유지하고 clk과 rst도 같은 방식으로 사용한다.
+    - thread_function의 입력은 din0, din1, din2, din3가 되며, din0는 rgb2ycocg_pixel 함수의 r, din1는 g, din2는 b, din3는 bits를 대응한다.
+
+    - simple_p2p directory에 있는 system_top.cc , system_top.h 파일을 참고하여 system_top_sc.cc , system_top_sc.h 파일을 생성하고 이것들을 src_sc directory에 저장한다
